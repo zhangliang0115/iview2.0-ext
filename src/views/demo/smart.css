@@ -1,0 +1,27 @@
+[v-cloak] {
+    display: none;
+}
+.pointer{cursor: pointer}
+.demo-spin-icon-load{
+    animation: ani-demo-spin 1s linear infinite;
+}
+@keyframes ani-demo-spin {
+    from { transform: rotate(0deg);}
+    50%  { transform: rotate(180deg);}
+    to   { transform: rotate(360deg);}
+}
+.demo-spin-col{
+    height: 100px;
+    position: relative;
+    border: 1px solid #eee;
+}
+.search-form .ivu-form-item{margin-bottom: 0px;margin-top: 8px;}
+.ivu-table-body .ivu-checkbox-wrapper,.ivu-table-header .ivu-checkbox-wrapper{margin-right: 0px;}
+.ivu-table-cell{padding-left: 10px;padding-right: 10px;}
+.ivu-table-tip .ivu-spin-fix{background: none;}
+/*.ivu-table-tip .mask{background-color: #ccc;opacity:0.3}*/
+.ivu-table-tip .mask{background-color: rgba(55,55,55,.6);opacity:0.3}
+
+.ivu-table-small td{height:30px;}
+.h30{height: 30px;}
+
