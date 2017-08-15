@@ -19,6 +19,49 @@ const routers = [
             title: ''
         },
         component: (resolve) => require(['./views/demo/datagrid.vue'], resolve)
+    },
+    {
+        path: '/editform',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/demo/editform.vue'], resolve)
+    }
+    ,
+    {
+        path: '/tool',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/demo/tool.vue'], resolve)
+    },
+    {
+        path: '/radiogroup',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/demo/radiogroup.vue'], resolve)
+    },
+    {
+        path: '/select',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/demo/select.vue'], resolve)
+    },
+    {
+        path: '/checkbox',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/demo/checkbosgroup.vue'], resolve)
+    },
+    {
+        path: '/tree',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/demo/tree.vue'], resolve)
     }
 ];
 export default routers;

@@ -4,7 +4,7 @@
         <div slot="header" >
             <Row>
                 <i-col span="12">
-                    <i-button type="primary" @click="handleSubmit('table')">登录</i-button>
+                    <i-button type="primary" icon="ios-plus-empty" @click="handleSubmit('table')">登录</i-button>
                     <i-button type="ghost" @click="reset">重置</i-button>
                     <i-button type="error" @click="delChecked">删除</i-button>
                 </i-col>
@@ -99,6 +99,13 @@
                 noDataText:'<div class="example-case"><div><div class="ivu-spin"><div class="ivu-spin-main"><span class="ivu-spin-dot"></span> <div class="ivu-spin-text"></div></div></div></div></div>',
               //  height:document.documentElement.clientHeight,
                 columns: [
+                    {type:'expand',width:100,align:'left',halign:'center',render:(h, params) => {
+                        return h('div', {
+                            props: {
+                                row: params.row
+                            }
+                        },'cs:'+params.row.id);
+                    }},
                     {key:'module',width:100,align:'left',halign:'center',title:'业务模块'},
                     {key:'operator',width:100,align:'center',halign:'center',title:'操作'},
                     {key:'operator_url',width1:200,align:'left',halign:'center',title:'请求URL'},

@@ -431,6 +431,7 @@
                     }
                     axios.get(this.url,{
                         params:params
+//                        ,headers: {'X-Requested-With': 'XMLHttpRequest'}
                     })
                         .then(function (response) {
                             var back=response.data;
@@ -443,6 +444,7 @@
                                 }else{
                                     vm.data=back.data;
                                 }
+                                vm.$emit('on-load-success', vm.data);
                             }else if(back.isFail){
                                 vm.$Notice.error({
                                     title: '操作失败',
